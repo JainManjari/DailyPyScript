@@ -1,1 +1,1 @@
-* * * * * /usr/bin/python3 /Users/manjarijain/Desktop/Git/DailyPyScript/PyScript.py >> /Users/manjarijain/Desktop/Git/DailyPyScript/PyScript.log 2>&1
+* * * * * /opt/homebrew/bin/python3 /Users/manjarijain/Desktop/Git/DailyPyScript/PyScript.py
