@@ -1,2 +1,13 @@
+## CronTab Commands
+crontab -e
 * * * * * /opt/homebrew/bin/python3 /Users/manjarijain/Desktop/Git/DailyPyScript/PyScript.py
+crontab -l
+
+
+## To run it every 20 seconds
 watch -n 20 /opt/homebrew/bin/python3 /Users/manjarijain/Desktop/Git/DailyPyScript/PyScript.py
+
+
+
+## To run it every it every day
+watch -n 86400 /opt/homebrew/bin/python3 /Users/manjarijain/Desktop/Git/DailyPyScript/PyScript.py
