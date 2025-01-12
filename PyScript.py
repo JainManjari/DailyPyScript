@@ -1,50 +1,17 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[5]:
-
-
-get_ipython().system('pip3 --version')
-
-
-# In[7]:
-
-
-get_ipython().system('pip3 install gitpython --break-system-packages')
-
-
-# In[64]:
-
-
 import os
 from git import Repo
 import time
 
-
-# In[65]:
-
-
 # Set your repository path and file details
 repo_path = "/Users/manjarijain/Desktop/Git/DailyPyScript"  # Path to your local Git repository
 file_to_edit = "DailyUpdates.txt"  # File you want to edit
-commit_message = getString("Update DailyUpdates.txt", epoch_time)
-
-
-# In[66]:
 
 
 github_remote_name = "origin"
-branch_name = "main" 
-
-
-# In[67]:
-
+branch_name = "main"
 
 def getString(content, epoch_time):
     return (content+" at epoch {epoch}").format(epoch=epoch_time)
-
-
-# In[68]:
 
 
 def edit_file(file_path, content_to_add):
@@ -54,9 +21,6 @@ def edit_file(file_path, content_to_add):
         print(f"File '{file_path}' updated successfully.")
     except Exception as e:
         print(f"Error updating file: {e}")
-
-
-# In[69]:
 
 
 def push_to_github(repo, commit_message):
@@ -76,9 +40,6 @@ def push_to_github(repo, commit_message):
         print(f"Error pushing to GitHub: {e}")
 
 
-# In[70]:
-
-
 def main():
     # Initialize the repository
     try:
@@ -94,20 +55,14 @@ def main():
         edit_file(file_path, content_to_add)
 
         # Push to github
+        commit_message = getString("Update DailyUpdates.txt", epoch_time)
         push_to_github(repo, commit_message)
 
     except Exception as e:
         print(f"Error with the repository: {e}")
 
-
-# In[72]:
-
-
 if __name__ == "__main__":
     main()
-
-
-# In[ ]:
 
 
 
